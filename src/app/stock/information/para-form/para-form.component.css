@@ -1,0 +1,10 @@
+/*.box-body {*/
+  /*font-size: 0.8em;*/
+/*}*/
+.form-group {
+  color: #666666;
+  font-weight: normal;
+}
+.control-label {
+  font-weight: lighter;
+}

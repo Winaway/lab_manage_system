@@ -1,0 +1,80 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">Vehicle Information</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+  <form [formGroup]="formModel" (submit)="save()" class="form-horizontal">
+    <div class="box-body">
+      <div class="form-group">
+           <!--[class.has-error]="formModel.get('name').touched&&(formModel.hasError('minlength','name') || formModel.hasError('required','name'))">-->
+        <label for="manufacturer" class="col-sm-2 control-label">生产企业</label>
+
+        <div class="col-sm-6">
+          <input formControlName="manufacturer" type="text" class="form-control" id="manufacturer" placeholder="生产企业">
+        </div>
+        <!--<span class="help-block" [class.hidden]="formModel.get('name').untouched || !formModel.hasError('minlength','name')">请至少输入三个字</span>-->
+        <!--<span class="help-block" [class.hidden]="formModel.get('name').untouched || !formModel.hasError('required','name')">名称是必填项</span>-->
+
+      </div>
+
+      <div class="form-group">
+      <label for="type" class="col-sm-2 control-label">型号</label>
+
+      <div class="col-sm-6">
+        <input formControlName="type" type="text" class="form-control" id="type" placeholder="例如：UGSP01">
+      </div>
+    </div>
+      <div class="form-group">
+        <label for="VIN" class="col-sm-2 control-label">VIN</label>
+
+        <div class="col-sm-6">
+          <input formControlName="VIN" type="text" class="form-control" id="VIN" placeholder="VIN">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="category" class="col-sm-2 control-label">Category：</label>
+        <div class="col-sm-4">
+          <select id="category" name="category" formControlName="category" class="selectpicker show-tick form-control" data-live-search="false">
+            <option value="1">L1e</option>
+            <option value="2">L2e</option>
+            <option value="3">L3e</option>
+            <option value="4">L4e</option>
+            <option value="5">L5e</option>
+            <option value="6">L6e</option>
+            <option value="7">L7e</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">动力类型</label>
+        <div class=" col-sm-10">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="radio-inline">
+                <label>
+                  <input type="radio" formControlName="vehicle_class" name="vehicle_class" value="1"> 燃油
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+            <div class="radio-inline">
+            <label>
+              <input type="radio" formControlName="vehicle_class" name="vehicle_class" value="2"> 电动
+            </label>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <button (click)="cancel()" type="submit" class="btn btn-default">取消</button>
+      <button  type="submit" class="btn btn-info pull-right">保存</button>
+    </div>
+    <!-- /.box-footer -->
+  </form>
+  <!--<button (click)="save()" >submit</button>-->
+</div>

@@ -1,0 +1,195 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">转向性能数据记录</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+
+  <div class="box-body">
+    <form [formGroup]="formModel1" class="form-horizontal" >
+      <div>
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            左转入圆
+          </a>
+          <a (click)="save1()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">车速(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay1" type="text" class="form-control" id="vDisplay1" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">转弯半径(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue1" type="text" class="form-control" id="vTrue1" placeholder="0.0">
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <form [formGroup]="formModel2" class="form-horizontal" >
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            右转入圆
+          </a>
+          <a (click)="save2()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">车速(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay2" type="text" class="form-control" id="vDisplay2" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">转弯半径(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue2" type="text" class="form-control" id="vTrue2" placeholder="0.0">
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <form [formGroup]="formModel3" class="form-horizontal" >
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            左转出圆
+          </a>
+          <a (click)="save3()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">车速(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay3" type="text" class="form-control" id="vDisplay3" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">转弯半径(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue3" type="text" class="form-control" id="vTrue3" placeholder="0.0">
+          </div>
+        </div>
+
+      </div>
+    </form>
+    <hr>
+    <form [formGroup]="formModel4" class="form-horizontal" >
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            右转出圆
+          </a>
+          <a (click)="save3()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">车速(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay3" type="text" class="form-control" id="vDisplay4" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">转弯半径(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue3" type="text" class="form-control" id="vTrue4" placeholder="0.0">
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer">
+    <!--<button (click)="cancel()" type="submit" class="btn btn-default">取消</button>-->
+    <!--<button (click)="save()"  type="submit" class="btn btn-info pull-right">保存</button>-->
+  </div>
+  <!-- /.box-footer -->
+
+</div>
+
+
+

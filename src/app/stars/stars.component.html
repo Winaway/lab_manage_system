@@ -1,0 +1,3 @@
+<span *ngFor="let star of stars;let i=index;" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="star"
+ (click)="clickStar(i)"></span>
+<!--index 是 angular 循环内置的一个变量，会随着循环增长-->

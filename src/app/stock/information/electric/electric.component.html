@@ -1,0 +1,58 @@
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#electricSafety" data-toggle="tab" aria-expanded="true">电气安全</a></li>
+    <li class=""><a href="#energyConsumption" data-toggle="tab" aria-expanded="false">能量消耗</a></li>
+    <li class=""><a href="#drivingRange" data-toggle="tab" aria-expanded="false">续驶里程</a></li>
+  </ul>
+  <div class="tab-content">
+    <!-- /.tab-pane -->
+    <div class="tab-pane active" id="electricSafety">
+      <!-- The speedometer -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Electric Safety ---<i>Reg. (EU) No.3/2014 Annex IV</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <app-electric-safety></app-electric-safety>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="energyConsumption">
+      <!-- The horn -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Energy Consumption ---<i>Reg. (EU) No.134/2014 Annex VII</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div  class="dataTables_wrapper form-inline dt-bootstrap">
+            <app-energy-consumption></app-energy-consumption>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="drivingRange">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Driving Range ---<i>Reg. (EU) No.134/2014 Annex VII</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="dataTables_wrapper form-inline dt-bootstrap">
+            <app-driving-range></app-driving-range>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+  </div>
+  <!-- /.tab-content -->
+</div>

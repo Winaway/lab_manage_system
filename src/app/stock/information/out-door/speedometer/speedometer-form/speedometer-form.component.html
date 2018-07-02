@@ -1,0 +1,158 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">车速表数据记录</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+
+  <div class="box-body">
+    <form [formGroup]="formModel1" class="form-horizontal" >
+      <div>
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+           First
+          </a>
+          <button (click)="save1()" [disabled]="formModel1.invalid" class="btn btn-success pull-right">SAVE</button>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group" [class.has-error]="formModel1.get('vTrue1').touched && formModel1.hasError('speedometervalid')">
+          <label  class="col-sm-2 control-label">V-Display(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay1" type="text" class="form-control" id="vDisplay1" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">V-True(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue1" type="text" class="form-control" id="vTrue1" placeholder="0.0">
+          </div>
+          <span class="help-block" [class.hidden]="formModel1.get('vTrue1').untouched || !formModel1.hasError('speedometervalid')">
+          车速表数据不合格
+        </span>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <form [formGroup]="formModel2" class="form-horizontal" >
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Second
+          </a>
+          <button (click)="save2()" [disabled]="formModel2.invalid" class="btn btn-success pull-right">SAVE</button>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group" [class.has-error]="formModel2.get('vTrue2').touched && formModel2.hasError('speedometervalid')">
+          <label  class="col-sm-2 control-label">V-Display(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay2" type="text" class="form-control" id="vDisplay2" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">V-True(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue2" type="text" class="form-control" id="vTrue2" placeholder="0.0">
+          </div>
+          <span class="help-block" [class.hidden]="formModel2.get('vTrue2').untouched ||!formModel2.hasError('speedometervalid')">
+          车速表数据不合格
+        </span>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <form [formGroup]="formModel3" class="form-horizontal" >
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Third
+          </a>
+          <a (click)="save3()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V=40 or 80%V<sub>max</sub>
+                    <br>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>0 ≤ V<sub>d</sub> - V<sub>t</sub> ≤ (0.1*V<sub>t</sub>)+4</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">V-Display(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDisplay3" type="text" class="form-control" id="vDisplay3" placeholder="0.0">
+          </div>
+          <label  class="col-sm-2 control-label">V-True(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vTrue3" type="text" class="form-control" id="vTrue3" placeholder="0.0">
+          </div>
+          <span class="help-block" [class.hidden]="!formModel3.hasError('speedometervalid')">
+          车速表数据不合格
+        </span>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer">
+    <!--<button (click)="cancel()" type="submit" class="btn btn-default">取消</button>-->
+    <!--<button (click)="save()"  type="submit" class="btn btn-info pull-right">保存</button>-->
+  </div>
+  <!-- /.box-footer -->
+
+</div>
+
+

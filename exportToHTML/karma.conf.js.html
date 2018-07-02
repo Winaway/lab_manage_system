@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>karma.conf.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); font-style: italic; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,128); font-weight: bold; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+karma.conf.js</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">// Karma configuration file, see link for more information</span><span class="s1"> 
+</span><span class="s0">// https://karma-runner.github.io/1.0/config/configuration-file.html</span><span class="s1"> 
+ 
+module.exports = </span><span class="s2">function </span><span class="s1">(config) { 
+  config.set({ 
+    basePath: </span><span class="s3">''</span><span class="s1">, 
+    frameworks: [</span><span class="s3">'jasmine'</span><span class="s1">, </span><span class="s3">'@angular/cli'</span><span class="s1">], 
+    plugins: [ 
+      require(</span><span class="s3">'karma-jasmine'</span><span class="s1">), 
+      require(</span><span class="s3">'karma-chrome-launcher'</span><span class="s1">), 
+      require(</span><span class="s3">'karma-jasmine-html-reporter'</span><span class="s1">), 
+      require(</span><span class="s3">'karma-coverage-istanbul-reporter'</span><span class="s1">), 
+      require(</span><span class="s3">'@angular/cli/plugins/karma'</span><span class="s1">) 
+    ], 
+    client:{ 
+      clearContext: </span><span class="s2">false </span><span class="s0">// leave Jasmine Spec Runner output visible in browser</span><span class="s1"> 
+    }, 
+    coverageIstanbulReporter: { 
+      reports: [ </span><span class="s3">'html'</span><span class="s1">, </span><span class="s3">'lcovonly' </span><span class="s1">], 
+      fixWebpackSourcePaths: </span><span class="s2">true</span><span class="s1"> 
+    }, 
+    angularCli: { 
+      environment: </span><span class="s3">'dev'</span><span class="s1"> 
+    }, 
+    reporters: [</span><span class="s3">'progress'</span><span class="s1">, </span><span class="s3">'kjhtml'</span><span class="s1">], 
+    port: </span><span class="s4">9876</span><span class="s1">, 
+    colors: </span><span class="s2">true</span><span class="s1">, 
+    logLevel: config.LOG_INFO, 
+    autoWatch: </span><span class="s2">true</span><span class="s1">, 
+    browsers: [</span><span class="s3">'Chrome'</span><span class="s1">], 
+    singleRun: </span><span class="s2">false</span><span class="s1"> 
+  }); 
+}; 
+</span></pre>
+</body>
+</html>

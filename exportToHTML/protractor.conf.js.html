@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>protractor.conf.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); font-style: italic; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,128); font-weight: bold; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+protractor.conf.js</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">// Protractor configuration file, see link for more information</span><span class="s1"> 
+</span><span class="s0">// https://github.com/angular/protractor/blob/master/lib/config.ts</span><span class="s1"> 
+ 
+</span><span class="s2">const </span><span class="s1">{ SpecReporter } = require(</span><span class="s3">'jasmine-spec-reporter'</span><span class="s1">); 
+ 
+exports.config = { 
+  allScriptsTimeout: </span><span class="s4">11000</span><span class="s1">, 
+  specs: [ 
+    </span><span class="s3">'./e2e/**/*.e2e-spec.ts'</span><span class="s1"> 
+  ], 
+  capabilities: { 
+    </span><span class="s3">'browserName'</span><span class="s1">: </span><span class="s3">'chrome'</span><span class="s1"> 
+  }, 
+  directConnect: </span><span class="s2">true</span><span class="s1">, 
+  baseUrl: </span><span class="s3">'http://localhost:4200/'</span><span class="s1">, 
+  framework: </span><span class="s3">'jasmine'</span><span class="s1">, 
+  jasmineNodeOpts: { 
+    showColors: </span><span class="s2">true</span><span class="s1">, 
+    defaultTimeoutInterval: </span><span class="s4">30000</span><span class="s1">, 
+    print: </span><span class="s2">function</span><span class="s1">() {} 
+  }, 
+  onPrepare() { 
+    require(</span><span class="s3">'ts-node'</span><span class="s1">).register({ 
+      project: </span><span class="s3">'e2e/tsconfig.e2e.json'</span><span class="s1"> 
+    }); 
+    jasmine.getEnv().addReporter(</span><span class="s2">new </span><span class="s1">SpecReporter({ spec: { displayStacktrace: </span><span class="s2">true </span><span class="s1">} })); 
+  } 
+}; 
+</span></pre>
+</body>
+</html>

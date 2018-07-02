@@ -1,0 +1,191 @@
+<section class="content">
+
+  <div class="row">
+    <div class="col-md-3">
+
+      <!-- Profile Image -->
+      <div class="box box-primary">
+        <div class="box-body box-profile">
+          <div class="dropdown user user-menu">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{{photoUrl}}" class="profile-user-img img-responsive" alt="vehicle profile picture">
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <div class="row">
+                  <div class="col-sm-8 col-sm-offset-1">
+                    <form>
+                      <div class="form-group">
+                        <label>文件输入</label><br>
+                        <input type="file" id="inputfile" (change)="uploadFile($event)">
+                        <button type="button" (click)="submitUploadFile()">submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <!-- Menu Body -->
+              <!--<li class="user-body">-->
+              <!--<div class="row">-->
+              <!--<canvas id="c1" width="50" height="50"></canvas>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /.row &ndash;&gt;-->
+              <!--</li>-->
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="profile-username text-center">{{vehicle.type}}</h3>
+
+          <!--<p class="text-muted text-center">electric moped</p>-->
+
+          <ul class="list-group list-group-unbordered text-muted" data-widget="tree">
+            <li class="list-group-item">
+              <b>Manufacturer</b> <a class="pull-right">{{vehicle.manufacturer}}</a>
+            </li>
+            <li class="list-group-item">
+              <b>VIN</b> <a class="pull-right">{{vehicle.VIN}}</a>
+            </li>
+            <li class="list-group-item">
+              <b>Category</b> <a class="pull-right">L{{vehicle.category}}e</a>
+            </li>
+            <li class="list-group-item">
+              <b>Class</b> <a class="pull-right">{{vehicle.vehicle_class==1?"燃油车":"电动车"}}</a>
+            </li>
+          </ul>
+          <div class="btn-group btn-block">
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown">试验类型
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a [routerLink]="['./indoor']">内场</a></li>
+              <li><a [routerLink]="['./']">外场</a></li>
+              <li><a [routerLink]="['./electric']">电动车专项</a></li>
+              <li><a [routerLink]="['./fuel']">燃油车专项</a></li>
+            </ul>
+          </div>
+
+          <a [routerLink]="['./report']" class="btn btn-success btn-block"><b>Report</b></a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+
+      <!-- About Me Box -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">技术参数</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body" id="techPara">
+          <div  [class.hidden]="paraShow">
+            <div [class.hidden]="paraEditing">
+              <strong><i class="fa fa-book margin-r-5"></i> 常规参数</strong>
+
+              <!--<p class="text-muted">-->
+              <!--B.S. in Computer Science from the University of Tennessee at Knoxville-->
+              <!--</p>-->
+              <ul class="list-group list-group-unbordered text-muted" data-widget="tree">
+                <li class="list-group-item">
+                  最高车速(km/h) <a class="pull-right">{{vehicleParam.max_speed}}</a>
+                </li>
+                <li class="list-group-item">
+                  整备质量(kg) <a class="pull-right">{{vehicleParam.mass_in_running_order}}</a>
+                </li>
+                <li class="list-group-item">
+                  最大允许质量(kg) <a class="pull-right">{{vehicleParam.max_mass}}</a>
+                </li>
+                <li class="list-group-item">
+                  前后制动 <a class="pull-right">{{vehicleParam.brake_type_front==1?'碟刹':'鼓刹'}}/{{vehicleParam.brake_type_rear==1?'碟刹':'鼓刹'}}</a>
+                </li>
+                <li class="list-group-item">
+                  前后胎压(kPa) <a class="pull-right">{{vehicleParam.tire_pressure_front}}/{{vehicleParam.tire_pressure_rear}}</a>
+                </li>
+              </ul>
+              <hr>
+              <strong><i class="fa fa-map-marker margin-r-5"></i> 电动车参数</strong>
+              <!--<p class="text-muted">Malibu, California</p>-->
+              <ul class="list-group list-group-unbordered text-muted" data-widget="tree">
+                <li class="list-group-item">
+                  P<sub>30mins</sub>(W/rpm) <a class="pull-right">{{vehicleParam.p_30mins}}/{{vehicleParam.rotate_speed_30mins}}</a>
+                </li>
+                <li class="list-group-item">
+                  T<sub>max</sub> (Nm/rpm) <a class="pull-right">{{vehicleParam.Tmax}}/{{vehicleParam.rotate_speed_tmax}}</a>
+                </li>
+                <li class="list-group-item">
+                  工作电压(V) <a class="pull-right">{{vehicleParam.voltage}}</a>
+                </li>
+                <li class="list-group-item">
+                  电池质量(kg)/组数 <a class="pull-right">{{vehicleParam.battary_mass}}/{{vehicleParam.battary_num}}</a>
+                </li>
+                <li class="list-group-item">
+                  电池容量(Ah) <a class="pull-right">{{vehicleParam.battary_storage}}</a>
+                </li>
+              </ul>
+              <hr>
+              <strong><i class="fa fa-pencil margin-r-5"></i> 燃油车参数</strong>
+              <ul class="list-group list-group-unbordered text-muted" data-widget="tree">
+                <li class="list-group-item">
+                  P<sub>max</sub>(W/rpm) <a class="pull-right">/</a>
+                </li>
+                <li class="list-group-item">
+                  T<sub>max</sub> (Nm/rpm) <a class="pull-right">/</a>
+                </li>
+                <li class="list-group-item">
+                  怠速转速(rpm) <a class="pull-right">/</a>
+                </li>
+                <li class="list-group-item">
+                  最高转速 (rpm) <a class="pull-right">/</a>
+                </li>
+                <li class="list-group-item">
+                  发动机排量(ml) <a class="pull-right">/</a>
+                </li>
+                <li class="list-group-item">
+                  末级传动比 <a class="pull-right">/</a>
+                </li>
+              </ul>
+            </div>
+            <div [class.hidden]='!paraEditing'>
+              <app-para-form></app-para-form>
+            </div>
+            <hr>
+          </div>
+
+
+          <!--<strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>-->
+          <div>
+            <a class="btn btn-default " (click)="paraEditing = !paraEditing" [class.hidden]="paraEditing"><i
+              class="fa fa-edit"></i> Edit</a>
+            <a class="btn btn-success " (click)="check()" [class.hidden]="!paraEditing"><i
+              class="fa fa-edit"></i> Check</a>
+            <a class="btn btn-warning " (click)="paraShow = !paraShow" [class.hidden]="paraShow"><i
+              class="fa fa-hide"></i> Hide</a>
+            <a class="btn btn-warning " (click)="paraShow = !paraShow" [class.hidden]="!paraShow"><i
+              class="fa fa-hide"></i> Show</a>
+          </div>
+          <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>-->
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+      <!-- /.nav-tabs-custom -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
+</section>

@@ -1,0 +1,121 @@
+<div class="box-body">
+  <form [formGroup]="formModel1" class="form-horizontal" >
+    <div>
+      <div class="box-header">
+        <strong><i class="fa fa-book margin-r-5"></i> 常规参数</strong>
+        <a (click)="save1()" class="btn btn-success pull-right">SAVE</a>
+      </div>
+      <div class="form-group">
+        <label  class="col-xs-6 control-label">最高车速(km/h)</label>
+        <div class="col-xs-6">
+          <input formControlName="maxSpeed" type="text" class="form-control" id="vDisplay1" placeholder="0.0">
+        </div>
+        <label  class="col-xs-6 control-label">整备质量(kg)</label>
+        <div class="col-xs-6">
+          <input formControlName="massInRunningOrder" type="text" class="form-control"  placeholder="0">
+        </div>
+        <label  class="col-xs-6 control-label">最大允许质量(kg)</label>
+        <div class="col-xs-6">
+          <input formControlName="maxMass" type="text" class="form-control" placeholder="0">
+        </div>
+        <label  class="col-xs-6 control-label">前后制动</label>
+        <div class="col-xs-3">
+          <input formControlName="brakeTypeFront" type="text" class="form-control"  placeholder="碟刹">
+        </div>
+        <div class="col-xs-3">
+          <input formControlName="brakeTypeRear" type="text" class="form-control"  placeholder="鼓刹">
+        </div>
+        <label  class="col-xs-6 control-label">前后胎压(kPa)</label>
+        <div class="col-xs-3">
+          <input formControlName="tirePressureFront" type="text" class="form-control"  placeholder="250">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="tirePressureRear" type="text" class="form-control"  placeholder="250">
+        </div>
+      </div>
+
+    </div>
+  </form>
+  <hr>
+  <form [formGroup]="formModel2" class="form-horizontal" >
+    <div >
+      <div class="box-header">
+        <strong><i class="fa fa-book margin-r-5"></i> 电动车参数</strong>
+        <a (click)="save2()" class="btn btn-success pull-right">SAVE</a>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-6 control-label ">P<sub>30mins</sub>(W/rpm)</label>
+        <div class="col-sm-3">
+          <input formControlName="p30mins" type="text" class="form-control" id="vDisplay2" placeholder="0.0">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="rotateSpeed30mins" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <label  class="col-sm-6 control-label">T<sub>max</sub> (Nm/rpm)</label>
+        <div class="col-sm-3">
+          <input formControlName="Tmax" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="rotateSpeedTmax" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <label  class="col-sm-6 control-label">工作电压(V)</label>
+        <div class="col-sm-6">
+          <input formControlName="voltage" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <label  class="col-sm-6 control-label">电池质量(kg)/组数</label>
+        <div class="col-sm-3">
+          <input formControlName="battaryMass" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="battaryNum" type="text" class="form-control"  placeholder="0">
+        </div>
+        <label  class="col-sm-6 control-label">电池容量(Ah)</label>
+        <div class="col-sm-6">
+          <input formControlName="battaryStorage" type="text" class="form-control"  placeholder="0">
+        </div>
+      </div>
+    </div>
+  </form>
+  <hr>
+  <form [formGroup]="formModel3" class="form-horizontal" >
+    <div>
+      <div class="box-header">
+        <strong><i class="fa fa-book margin-r-5"></i> 燃油车参数</strong>
+        <a (click)="save3()" class="btn btn-success pull-right">SAVE</a>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-6 control-label">P<sub>max</sub>(W/rpm)</label>
+        <div class="col-sm-3">
+          <input formControlName="vDisplay3" type="text" class="form-control" id="vDisplay3" placeholder="0.0">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="vDisplay3" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <label  class="col-sm-6 control-label">T<sub>max</sub> (Nm/rpm)</label>
+        <div class="col-sm-3">
+          <input formControlName="vTrue3" type="text" class="form-control" id="vTrue3" placeholder="0.0">
+        </div>
+        <div class="col-sm-3">
+          <input formControlName="vTrue3" type="text" class="form-control"  placeholder="0.0">
+        </div>
+        <label  class="col-sm-6 control-label">怠速转速(rpm)</label>
+        <div class="col-sm-6">
+          <input formControlName="vTrue3" type="text" class="form-control" placeholder="0">
+        </div>
+        <label  class="col-sm-6 control-label">最高转速 (rpm)</label>
+        <div class="col-sm-6">
+          <input formControlName="vTrue3" type="text" class="form-control"  placeholder="0">
+        </div>
+        <label  class="col-sm-6 control-label">发动机排量(ml))</label>
+        <div class="col-sm-6">
+          <input formControlName="vTrue3" type="text" class="form-control"  placeholder="0">
+        </div>
+        <label  class="col-sm-6 control-label">末级传动比</label>
+        <div class="col-sm-6">
+          <input formControlName="vTrue3" type="text" class="form-control"  placeholder="0">
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>

@@ -1,0 +1,140 @@
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#massDimension" data-toggle="tab" aria-expanded="true">质量与尺寸</a></li>
+    <li class=""><a href="#handFoot" data-toggle="tab" aria-expanded="false">扶手与脚踏</a></li>
+    <li class=""><a href="#antitheft" data-toggle="tab" aria-expanded="false">防盗装置</a></li>
+    <li class=""><a href="#stand" data-toggle="tab" aria-expanded="false">支撑</a></li>
+    <li class=""><a href="#plate" data-toggle="tab" aria-expanded="false">牌照板空间</a></li>
+    <li class=""><a href="#occupant" data-toggle="tab" aria-expanded="false">乘员保护</a></li>
+  </ul>
+  <div class="tab-content">
+    <!-- /.tab-pane -->
+    <div class="tab-pane active" id="massDimension">
+      <!-- The speedometer -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Reg. (EU) No.44/2014 Annex XI</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div  [class.hidden]="massEditing">
+            <app-mass-dimension></app-mass-dimension>
+          </div>
+          <div  [class.hidden]="!massEditing">
+            <app-mass-form></app-mass-form>
+          </div>
+          <a (click)="massEditing = !massEditing" [class.hidden]="massEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="massEditing = !massEditing" [class.hidden]="!massEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="handFoot">
+      <!-- The horn -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Reg. (EU) No.44/2014 Annex XIII</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div  [class.hidden]="handEditing">
+            <app-hand-foot></app-hand-foot>
+          </div>
+          <div  [class.hidden]="!handEditing">
+            <app-hand-form></app-hand-form>
+          </div>
+          <a (click)="handEditing = !handEditing" [class.hidden]="handEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="handEditing = !handEditing" [class.hidden]="!handEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="antitheft">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Reg. (EU) No.44/2014 Annex VI</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="antitheftEditing">
+            <app-antitheft></app-antitheft>
+          </div>
+          <div  [class.hidden]="!antitheftEditing">
+            <app-antitheft-form></app-antitheft-form>
+          </div>
+          <a (click)="antitheftEditing = !antitheftEditing" [class.hidden]="antitheftEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="antitheftEditing = !antitheftEditing" [class.hidden]="!antitheftEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="stand">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Stands ---<i>Reg. (EU) No.44/2014 Annex XVI</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="standEditing">
+            <app-stand></app-stand>
+          </div>
+          <div  [class.hidden]="!standEditing">
+            <app-stand-form></app-stand-form>
+          </div>
+          <a (click)="standEditing = !standEditing" [class.hidden]="standEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="standEditing = !standEditing" [class.hidden]="!standEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="plate">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Registration plate space ---<i>Reg. (EU) No.44/2014 Annex XIV</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="plateEditing">
+            <app-plate></app-plate>
+          </div>
+          <div  [class.hidden]="!plateEditing">
+            <app-plate-form></app-plate-form>
+          </div>
+          <a (click)="plateEditing = !plateEditing" [class.hidden]="plateEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="plateEditing = !plateEditing" [class.hidden]="!plateEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="occupant">
+      <!-- The noise -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Occupant protection, including interior fittings and vehicle doors ---<i>Reg. (EU) No.3/2014 Annex XVII</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="occupantEditing">
+            <app-occupant></app-occupant>
+          </div>
+          <div  [class.hidden]="!occupantEditing">
+            <app-occupant-form></app-occupant-form>
+          </div>
+          <a (click)="occupantEditing = !occupantEditing" [class.hidden]="occupantEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="occupantEditing = !occupantEditing" [class.hidden]="!occupantEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+  </div>
+  <!-- /.tab-content -->
+</div>

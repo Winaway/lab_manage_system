@@ -1,0 +1,123 @@
+
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#speedometer" data-toggle="tab" aria-expanded="true">车速表</a></li>
+    <li class=""><a href="#horn" data-toggle="tab" aria-expanded="false">喇叭</a></li>
+    <li class=""><a href="#brake" data-toggle="tab" aria-expanded="false">制动</a></li>
+    <li class=""><a href="#steer" data-toggle="tab" aria-expanded="false">转向稳定性</a></li>
+    <li class=""><a href="#maxSpeed" data-toggle="tab" aria-expanded="false">最高车速</a></li>
+  </ul>
+  <div class="tab-content">
+    <!-- /.tab-pane -->
+    <div class="tab-pane active" id="speedometer">
+      <!-- The speedometer -->
+      <div class="box" >
+        <div class="box-header">
+          <h3 class="box-title">Speedometer ---<i>Reg. (EU) No.3/2014 Annex VIII</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="speedoEditing">
+            <app-speedometer #speedometer></app-speedometer>
+          </div>
+          <div [class.hidden]="!speedoEditing">
+            <app-speedometer-form #speedoForm [vehicle] = 'vehicle'></app-speedometer-form>
+          </div>
+          <a (click)="speedoEditing = !speedoEditing;speedoForm.checkSpeedoForm()" [class.hidden]="speedoEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="speedoEditing = !speedoEditing;speedometer.checkSpeedometer()" [class.hidden]="!speedoEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="horn">
+      <!-- The horn -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Horn ---<i>Reg. (EU) No.3/2014 Annex II</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+        <div [class.hidden]="hornEditing">
+          <app-horn></app-horn>
+        </div>
+        <!-- /.box-body -->
+      <div  [class.hidden]="!hornEditing">
+        <app-horn-form></app-horn-form>
+      </div>
+      <a (click)="hornEditing = !hornEditing" [class.hidden]="hornEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+      <a (click)="hornEditing = !hornEditing" [class.hidden]="!hornEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+      </div>
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="brake">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Brake ---<i>Reg. (EU) No.3/2014 Annex III</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div [class.hidden]="brakeEditing">
+          <app-brake></app-brake>
+          </div>
+          <div [class.hidden]="!brakeEditing">
+            <app-brake-form [vehicle] = 'vehicle'></app-brake-form>
+          </div>
+          <a (click)="brakeEditing = !brakeEditing" [class.hidden]="brakeEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="brakeEditing = !brakeEditing" [class.hidden]="!brakeEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+          <a  (click)="doPrint('brake')"  class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="steer">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Steer-ability,cornering properties and turn-ability ---<i>EU NO.3-2014 ANNEX XIV</i></h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+        <div [class.hidden]="steerEditing">
+          <app-steer></app-steer>
+        </div>
+        <div  [class.hidden]="!steerEditing">
+          <app-steer-form></app-steer-form>
+        </div>
+        <a (click)="steerEditing = !steerEditing" [class.hidden]="steerEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+        <a (click)="steerEditing = !steerEditing" [class.hidden]="!steerEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        <!-- /.box-body -->
+        </div>
+      </div>
+    </div>
+    <!-- /.tab-pane -->
+    <div class="tab-pane" id="maxSpeed">
+      <!-- The brake -->
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Maximum Speed ---<i>EU NO.3-2014 ANNEX XIV</i></h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+          <div [class.hidden]="speedEditing">
+            <app-max-speed></app-max-speed>
+          </div>
+          <div  [class.hidden]="!speedEditing">
+            <app-speed-form></app-speed-form>
+          </div>
+          <a (click)="speedEditing = !speedEditing" [class.hidden]="speedEditing" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+          <a (click)="speedEditing = !speedEditing" [class.hidden]="!speedEditing" class="btn btn-default"><i class="fa fa-edit"></i> Check</a>
+        </div>
+
+        <!-- /.box-body -->
+      </div>
+
+    </div>
+    <!-- /.tab-pane -->
+  </div>
+  <!-- /.tab-content -->
+</div>

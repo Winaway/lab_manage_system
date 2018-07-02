@@ -19,9 +19,23 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
+        "../node_modules/admin-lte/dist/css/AdminLTE.min.css",
+        "../node_modules/admin-lte/dist/css/skins/skin-blue.css",
+        "../node_modules/admin-lte/plugins/iCheck/square/blue.css"
+
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/admin-lte/dist/js/app.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/admin-lte/plugins/iCheck/icheck.min.js",
+        "../node_modules/admin-lte/plugins/Chartjs/Chart.min.js",
+        "../node_modules/admin-lte/plugins/fastclick/fastclick.min.js",
+        "assets/analytics.min.js",
+        "assets/demo.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

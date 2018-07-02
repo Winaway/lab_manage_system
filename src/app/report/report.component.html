@@ -1,0 +1,177 @@
+<div class="box">
+  <div class="box-header with-border">
+    <a class="btn btn-success btn-sm" (click)="print('report')"><span class="fa fa-print fa-lg"></span> 打印报告</a>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body" id="report">
+    <div class="noscreen">
+      <p>
+        上海机动车检测认证技术研究中心有限公司
+      </p>
+      <hr />
+    </div>
+    <div style="margin-top: 20px">
+      <h2>R168项目测试信息记录表</h2>
+      <table class="table table-bordered table-striped dataTable">
+        <tbody>
+        <tr>
+          <td colspan="4" style="text-align: center;"><b>整车常规参数</b></td>
+        </tr>
+        <tr>
+          <td>制造商</td>
+          <td></td>
+          <td>车辆型号</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>车辆类型</td>
+          <td></td>
+          <td>车辆类别</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VIN</td>
+          <td></td>
+          <td>最高车速 km/h</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>整备质量 kg</td>
+          <td></td>
+          <td>最大允许质量 kg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>制动型式</td>
+          <td></td>
+          <td>轮胎尺寸/胎压</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align: center"><b>电动车所需参数</b></td>
+        </tr>
+        <tr>
+          <td>30mins功率 kW</td>
+          <td style="width: 25%"></td>
+          <td>最大扭矩 Nm</td>
+          <td style="width: 25%"></td>
+        </tr>
+        <tr>
+          <td>电机最高转速</td>
+          <td></td>
+          <td>工作电压</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>电池质量</td>
+          <td></td>
+          <td>电池容量</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align: center"><b>燃油车所需参数</b></td>
+
+        </tr>
+        <tr>
+          <td>制动型式</td>
+          <td></td>
+          <td>轮胎尺寸/胎压</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>怠速转速 rpm</td>
+          <td></td>
+          <td>最高转速 rpm</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>发动机排量</td>
+          <td></td>
+          <td>空燃比</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>传动比</td>
+          <td></td>
+          <td>油压</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>最大功率</td>
+          <td></td>
+          <td>最大扭矩</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered" style="page-break-after: always">
+        <tbody>
+        <tr>
+          <td>项目负责人</td>
+          <td style="width: 16%"></td>
+          <td>开始时间</td>
+          <td style="width: 16%"></td>
+          <td>结束时间</td>
+          <td style="width: 16%"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="noscreen">
+      <p>
+        上海机动车检测认证技术研究中心有限公司
+      </p>
+      <hr />
+    </div>
+    <div>
+      <div class="box-header">
+        <h3 class="box-title">Speedometer ---<i>Reg. (EU) No.3/2014 Annex VIII</i></h3>
+      </div>
+      <app-speedometer></app-speedometer>
+    </div>
+    <div>
+      <div class="box-header">
+        <h3 class="box-title">Horn ---<i>Reg. (EU) No.3/2014 Annex II</i></h3>
+      </div>
+      <app-horn></app-horn>
+    </div>
+    <div style="page-break-after: always">
+      <div class="box-header" >
+        <h3 class="box-title">Steer-ability,cornering properties and turn-ability ---<i>EU NO.3-2014 ANNEX XIV</i></h3>
+      </div>
+      <app-steer></app-steer>
+    </div>
+    <div class="noscreen">
+      <p>
+        上海机动车检测认证技术研究中心有限公司
+      </p>
+      <hr />
+    </div>
+    <div style="page-break-after: always">
+      <div class="box-header">
+        <h3 class="box-title">Brake ---<i>Reg. (EU) No.3/2014 Annex III</i></h3>
+      </div>
+      <app-brake></app-brake>
+    </div>
+    <div class="noscreen">
+      <p>
+        上海机动车检测认证技术研究中心有限公司
+      </p>
+      <hr />
+    </div>
+    <div>
+      <div class="box-header">
+        <h3 class="box-title">Noise Emission ---<i>EU NO.134-2014 ANNEX XIV</i></h3>
+      </div>
+      <app-noise></app-noise>
+    </div>
+    <div>
+      <div class="box-header">
+        <h3 class="box-title">Maximum Speed ---<i>EU NO.3-2014 ANNEX XIV</i></h3>
+      </div>
+      <app-max-speed></app-max-speed>
+    </div>
+
+  </div>
+  <!-- /.box-body -->
+</div>

@@ -1,0 +1,53 @@
+<div class="box">
+  <div class="box-header with-border">
+    <a class="btn btn-success btn-sm" (click)="create()"><span class="glyphicon glyphicon-plus"></span>创建</a>
+    <div class="box-tools">
+      <div class="input-group input-group-sm" style="width: 150px;margin-top: 7px">
+        <input [formControl]="nameFilter" type="text" name="table_search" class="form-control pull-right"
+               placeholder="车辆型号">
+
+        <div class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <table class="table table-bordered">
+      <tr>
+        <th style="width: 10px">#</th>
+        <th>车辆编号</th>
+        <th>生产企业</th>
+        <th>车辆型号</th>
+        <th>车辆类别</th>
+        <th>操作</th>
+      </tr>
+      <tr *ngFor="let vehicle of Vehicles |async| stockFilter:'type':keyword;let i =index;">
+        <td>{{i+1}}</td>
+        <td>{{vehicle.vehicle_id}}</td>
+        <td>{{vehicle.manufacturer}}</td>
+        <td>{{vehicle.type}}</td>
+        <td>
+          L{{vehicle.category}}e
+        </td>
+        <td>
+          <a class="btn btn-primary btn-xs" (click)="check(vehicle)"><span
+            class="fa fa-folder-open"></span> 查看</a>
+          <a class="btn btn-danger btn-xs" (click)="deleteVehicle(vehicle)"><span class="fa fa-trash"></span> 删除</a>
+        </td>
+      </tr>
+      <tr>
+    </table>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix">
+    <ul class="pagination pagination-sm no-margin pull-right">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>

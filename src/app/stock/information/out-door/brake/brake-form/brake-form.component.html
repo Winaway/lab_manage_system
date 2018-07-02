@@ -1,0 +1,526 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">制动数据记录</h3>
+  </div>
+  <!-- /.box-header -->
+  <!-- form start -->
+
+    <div class="box-body">
+      <form [formGroup]="formModel1" class="form-horizontal" >
+      <div>
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            干式制动-单前
+          </a>
+          <a (click)="save1()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="vDryFront" class="col-sm-2 control-label">V(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDryFront" type="text" class="form-control" id="vDryFront" placeholder="0.0">
+          </div>
+          <label for="sDryFront" class="col-sm-2 control-label">S(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="sDryFront" type="text" class="form-control" id="sDryFront" placeholder="0.0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfddDryFront" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+          <div class="col-sm-2">
+            <input formControlName="mfddDryFront" type="text" class="form-control" id="mfddDryFront" placeholder="0.00">
+          </div>
+          <label for="fDryFront" class="col-sm-2 control-label">F(N)</label>
+          <div class="col-sm-2">
+            <input formControlName="fDryFront" type="text" class="form-control" id="fDryFront" placeholder="0.00">
+          </div>
+        </div>
+      </div>
+      <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            干式制动-单后
+          </a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <label for="vDryRear" class="col-sm-2 control-label">V(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDryRear" type="text" class="form-control" id="vDryRear" placeholder="0.0">
+          </div>
+          <label for="sDryRear" class="col-sm-2 control-label">S(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="sDryRear" type="text" class="form-control" id="sDryRear" placeholder="0.0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfddDryRear" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+          <div class="col-sm-2">
+            <input formControlName="mfddDryRear" type="text" class="form-control" id="mfddDryRear" placeholder="0.00">
+          </div>
+          <label for="fDryRear" class="col-sm-2 control-label">F(N)</label>
+          <div class="col-sm-2">
+            <input formControlName="fDryRear" type="text" class="form-control" id="fDryRear" placeholder="0.00">
+          </div>
+        </div>
+      </div>
+      </form>
+      <hr>
+      <form [formGroup]="formModel2" class="form-horizontal" >
+        <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            CBS-轻载
+          </a>
+          <a (click)="save2()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="vDryCbsUnload" class="col-sm-2 control-label">V(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDryCbsUnload" type="text" class="form-control" id="vDryCbsUnload" placeholder="0.0">
+          </div>
+          <label for="sDryCbsUnload" class="col-sm-2 control-label">S(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="sDryCbsUnload" type="text" class="form-control" id="sDryCbsUnload" placeholder="0.0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfddDryCbsUnload" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+          <div class="col-sm-2">
+            <input formControlName="mfddDryCbsUnload" type="text" class="form-control" id="mfddDryCbsUnload" placeholder="0.00">
+          </div>
+          <label for="fDryCbsUnload" class="col-sm-2 control-label">F(N)</label>
+          <div class="col-sm-2">
+            <input formControlName="fDryCbsUnload" type="text" class="form-control" id="fDryCbsUnload" placeholder="0.00">
+          </div>
+        </div>
+      </div>
+        <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            CBS-满载
+          </a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="vDryCbsLoad" class="col-sm-2 control-label">V(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDryCbsLoad" type="text" class="form-control" id="vDryCbsLoad" placeholder="0.0">
+          </div>
+          <label for="sDryCbsLoad" class="col-sm-2 control-label">S(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="sDryCbsLoad" type="text" class="form-control" id="sDryCbsLoad" placeholder="0.0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfddDryCbsLoad" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+          <div class="col-sm-2">
+            <input formControlName="mfddDryCbsLoad" type="text" class="form-control" id="mfddDryCbsLoad" placeholder="0.00">
+          </div>
+          <label for="fDryCbsLoad" class="col-sm-2 control-label">F(N)</label>
+          <div class="col-sm-2">
+            <input formControlName="fDryCbsLoad" type="text" class="form-control" id="fDryCbsLoad" placeholder="0.00">
+          </div>
+        </div>
+      </div>
+        <div>
+          <div class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              紧急制动-轻载
+            </a>
+            <ul class="dropdown-menu" style="background: #ffdd84">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>初始速度</strong></p>
+                    <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                    <p><strong>判定条件</strong></p>
+                    <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <label for="vDryEmergUnload" class="col-sm-2 control-label">V(km/h)</label>
+            <div class="col-sm-2">
+              <input formControlName="vDryEmergUnload" type="text" class="form-control" id="vDryEmergUnload" placeholder="0.0">
+            </div>
+            <label for="sDryEmergUnload" class="col-sm-2 control-label">S(m)</label>
+            <div class="col-sm-2">
+              <input formControlName="sDryEmergUnload" type="text" class="form-control" id="sDryEmergUnload" placeholder="0.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mfddDryEmergUnload" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+            <div class="col-sm-2">
+              <input formControlName="mfddDryEmergUnload" type="text" class="form-control" id="mfddDryEmergUnload" placeholder="0.00">
+            </div>
+            <label for="fDryEmergUnload" class="col-sm-2 control-label">F(N)</label>
+            <div class="col-sm-2">
+              <input formControlName="fDryEmergUnload" type="text" class="form-control" id="fDryEmergUnload" placeholder="0.00">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              紧急制动-满载
+            </a>
+            <ul class="dropdown-menu" style="background: #ffdd84">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>初始速度</strong></p>
+                    <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                    <p><strong>判定条件</strong></p>
+                    <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <label for="vDryEmergLoad" class="col-sm-2 control-label">V(km/h)</label>
+            <div class="col-sm-2">
+              <input formControlName="vDryEmergLoad" type="text" class="form-control" id="vDryEmergLoad" placeholder="0.0">
+            </div>
+            <label for="sDryEmergLoad" class="col-sm-2 control-label">S(m)</label>
+            <div class="col-sm-2">
+              <input formControlName="sDryEmergLoad" type="text" class="form-control" id="sDryEmergLoad" placeholder="0.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mfddDryEmergLoad" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+            <div class="col-sm-2">
+              <input formControlName="mfddDryEmergLoad" type="text" class="form-control" id="mfddDryEmergLoad" placeholder="0.00">
+            </div>
+            <label for="fDryEmergLoad" class="col-sm-2 control-label">F(N)</label>
+            <div class="col-sm-2">
+              <input formControlName="fDryEmergLoad" type="text" class="form-control" id="fDryEmergLoad" placeholder="0.00">
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <form [formGroup]="formModel3" class="form-horizontal" >
+        <div >
+          <div class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              同时制动
+            </a>
+            <a (click)="save3()" class="btn btn-success pull-right">SAVE</a>
+            <ul class="dropdown-menu" style="background: #ffdd84">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>初始速度</strong></p>
+                    <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                    <p><strong>判定条件</strong></p>
+                    <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <label for="vDryAll" class="col-sm-2 control-label">V(km/h)</label>
+            <div class="col-sm-2">
+              <input formControlName="vDryAll" type="text" class="form-control" id="vDryAll" placeholder="0.0">
+            </div>
+            <label for="sDryAll" class="col-sm-2 control-label">S(m)</label>
+            <div class="col-sm-2">
+              <input formControlName="sDryAll" type="text" class="form-control" id="sDryAll" placeholder="0.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-2 control-label">F(N)</label>
+            <div class="col-sm-2">
+              <input formControlName="fDryAllFront" type="text" class="form-control" id="fDryAllFront" placeholder="0.00 front">
+              <input formControlName="fDryAllRear" type="text" class="form-control" id="fDryAllRear" placeholder="0.00 rear">
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <form [formGroup]="formModel4" class="form-horizontal" >
+        <div >
+        <div class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            干式制动-高速
+          </a>
+          <a (click)="save4()" class="btn btn-success pull-right">SAVE</a>
+          <ul class="dropdown-menu" style="background: #ffdd84">
+            <!-- The user image in the menu -->
+            <li class="user-header">
+
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <p><strong>初始速度</strong></p>
+                  <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                  <p><strong>判定条件</strong></p>
+                  <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="vDryHighSpeed" class="col-sm-2 control-label">V(km/h)</label>
+          <div class="col-sm-2">
+            <input formControlName="vDryHighSpeed" type="text" class="form-control" id="vDryHighSpeed" placeholder="0.0">
+          </div>
+          <label for="sDryHighSpeed" class="col-sm-2 control-label">S(m)</label>
+          <div class="col-sm-2">
+            <input formControlName="sDryHighSpeed" type="text" class="form-control" id="sDryHighSpeed" placeholder="0.0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfddDryHighSpeed" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+          <div class="col-sm-2">
+            <input formControlName="mfddDryHighSpeed" type="text" class="form-control" id="mfddDryHighSpeed" placeholder="0.00">
+          </div>
+          <label class="col-sm-2 control-label">F(N)</label>
+          <div class="col-sm-2">
+            <input formControlName="fDryHighSpeedFront" type="text" class="form-control" id="fDryHighSpeedFront" placeholder="0.00 front">
+            <input formControlName="fDryHighSpeedRear" type="text" class="form-control" id="fDryHighSpeedRear" placeholder="0.00 rear">
+          </div>
+        </div>
+      </div>
+      </form>
+      <hr>
+      <form [formGroup]="formModel5" class="form-horizontal" >
+        <div >
+          <div class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              CBS Failure-Front
+            </a>
+            <a (click)="save5()" class="btn btn-success pull-right">SAVE</a>
+            <ul class="dropdown-menu" style="background: #ffdd84">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>初始速度</strong></p>
+                    <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                    <p><strong>判定条件</strong></p>
+                    <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <label for="vCbsFailureFront" class="col-sm-2 control-label">V(km/h)</label>
+            <div class="col-sm-2">
+              <input formControlName="vCbsFailureFront" type="text" class="form-control" id="vCbsFailureFront" placeholder="0.0">
+            </div>
+            <label for="sCbsFailureFront" class="col-sm-2 control-label">S(m)</label>
+            <div class="col-sm-2">
+              <input formControlName="sCbsFailureFront" type="text" class="form-control" id="sCbsFailureFront" placeholder="0.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mfddCbsFailureFront" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+            <div class="col-sm-2">
+              <input formControlName="mfddCbsFailureFront" type="text" class="form-control" id="mfddCbsFailureFront" placeholder="0.00">
+            </div>
+            <label for="fCbsFailureFront" class="col-sm-2 control-label">F(N)</label>
+            <div class="col-sm-2">
+              <input formControlName="fCbsFailureFront" type="text" class="form-control" id="fCbsFailureFront" placeholder="0.00">
+            </div>
+          </div>
+        </div>
+        <div >
+          <div class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              CBS-failure-rear
+            </a>
+            <ul class="dropdown-menu" style="background: #ffdd84">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <p><strong>初始速度</strong></p>
+                    <p>V = 60 or 0.9V<sub>max</sub>(lower)</p>
+                    <p><strong>判定条件</strong></p>
+                    <p>S ≤ 0.1V+0.0111V<sub>2</sub><br>or<br>MFDD ≥ 3.4 m/s<sup>2</sup></p>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+              </li>
+            </ul>
+          </div>
+          <div class="form-group">
+            <label for="vCbsFailureRear" class="col-sm-2 control-label">V(km/h)</label>
+            <div class="col-sm-2">
+              <input formControlName="vCbsFailureRear" type="text" class="form-control" id="vCbsFailureRear" placeholder="0.0">
+            </div>
+            <label for="sCbsFailureRear" class="col-sm-2 control-label">S(m)</label>
+            <div class="col-sm-2">
+              <input formControlName="sCbsFailureRear" type="text" class="form-control" id="sCbsFailureRear" placeholder="0.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mfddCbsFailureRear" class="col-sm-2 control-label">MFDD(m/s<sup>2</sup>)</label>
+            <div class="col-sm-2">
+              <input formControlName="mfddCbsFailureRear" type="text" class="form-control" id="mfddCbsFailureRear" placeholder="0.00">
+            </div>
+            <label for="fCbsFailureRear" class="col-sm-2 control-label">F(N)</label>
+            <div class="col-sm-2">
+              <input formControlName="fCbsFailureRear" type="text" class="form-control" id="fCbsFailureRear" placeholder="0.00">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+      <!--<button (click)="cancel()" type="submit" class="btn btn-default">取消</button>-->
+      <!--<button (click)="save()"  type="submit" class="btn btn-info pull-right">保存</button>-->
+    </div>
+    <!-- /.box-footer -->
+
+</div>
+

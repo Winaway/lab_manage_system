@@ -1,0 +1,17 @@
+@page {
+  size: auto;
+  /* auto is the initial value */
+  margin: 0px;
+}
+@media screen {
+  .noscreen{
+    DISPLAY: none
+  }
+}
+
+@media Print {
+  /* 设置 打印模式下隐藏样式*/
+  .noprint {
+    DISPLAY: none
+  }
+}

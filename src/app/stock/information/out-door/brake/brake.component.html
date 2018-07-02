@@ -1,0 +1,449 @@
+<div class="box-body">
+  <div class="dataTables_wrapper form-inline dt-bootstrap">
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered table-striped dataTable" role="grid"
+               aria-describedby="example1_info">
+          <thead>
+          <tr role="row">
+            <th class="sorting" tabindex="0" style="width: 100px;" rowspan="2" colspan="2">
+              项目
+            </th>
+            <th class="sorting_asc" tabindex="0"
+                style="width: 180px;text-align: center" colspan="2" rowspan="2">
+              条件
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center" colspan="4">
+              结果
+            </th>
+          </tr>
+          <tr role="row">
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center">
+              V
+              <small>(km/h)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              S
+              <small>(m)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              MFDD
+              <small>(m/s<sup>2</sup>)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              F
+              <small>(N)</small>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr role="row" class="odd">
+            <td class="" rowspan="8">干式</td>
+            <td class="sorting_1">Front</td>
+            <td rowspan="6">34.7</td>
+            <td rowspan="2">Loaded</td>
+            <td>{{brake.v_dry_front}}</td>
+            <td>{{brake.s_dry_front}}</td>
+            <td>{{brake.mfdd_dry_front}}</td>
+            <td>{{brake.f_dry_front}}</td>
+          </tr>
+          <tr role="row" class="even">
+            <td class="">Rear</td>
+            <td>{{brake.v_dry_rear}}</td>
+            <td>{{brake.s_dry_rear}}</td>
+            <td>{{brake.mfdd_dry_rear}}</td>
+            <td>{{brake.f_dry_rear}}</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td class="" rowspan="2">CBS</td>
+            <td>轻载</td>
+            <td>{{brake.v_dry_cbs_unloaded}}</td>
+            <td>{{brake.s_dry_cbs_unloaded}}</td>
+            <td>{{brake.mfdd_dry_cbs_unloaded}}</td>
+            <td>{{brake.f_dry_cbs_unloaded}}</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>满载</td>
+            <td>{{brake.v_dry_cbs_loaded}}</td>
+            <td>{{brake.s_dry_cbs_loaded}}</td>
+            <td>{{brake.mfdd_dry_cbs_loaded}}</td>
+            <td>{{brake.f_dry_cbs_loaded}}</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td class="" rowspan="2">紧急制动</td>
+            <td>轻载</td>
+            <td>{{brake.v_dry_emerg_unloaded}}</td>
+            <td>{{brake.s_dry_emerg_unloaded}}</td>
+            <td>{{brake.mfdd_dry_emerg_unloaded}}</td>
+            <td>{{brake.f_dry_emerg_unloaded}}</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>满载</td>
+            <td>{{brake.v_dry_emerg_loaded}}</td>
+            <td>{{brake.s_dry_emerg_loaded}}</td>
+            <td>{{brake.mfdd_dry_emerg_loaded}}</td>
+            <td>{{brake.f_dry_emerg_loaded}}</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td class="">同时制动</td>
+            <td>-</td>
+            <td>轻载</td>
+            <td>{{brake.v_dry_all_unloaded}}</td>
+            <td>{{brake.s_dry_all_unloaded}}</td>
+            <td>X</td>
+            <td>{{brake.f_dry_all_unloaded_front}}/{{brake.f_dry_all_unloaded_rear}}</td>
+          </tr>
+          <tr role="row" class="even">
+            <td class="">高速制动</td>
+            <td>-</td>
+            <td>轻载</td>
+            <td>{{brake.v_dry_high_speed_unloaded}}</td>
+            <td>{{brake.s_dry_high_speed_unloaded}}</td>
+            <td>{{brake.mfdd_dry_high_speed_unloaded}}</td>
+            <td>{{brake.f_dry_high_speed_unloaded_front}}/{{brake.f_dry_high_speed_unloaded_rear}}</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td rowspan="2">CBS失效</td>
+            <td>Front</td>
+            <td rowspan="2">-</td>
+            <td>满载</td>
+            <td>{{brake.v_cbsfailure_loaded_front}}</td>
+            <td>{{brake.s_cbsfailure_loaded_front}}</td>
+            <td>{{brake.mfdd_cbsfailure_loaded_front}}</td>
+            <td>{{brake.f_cbsfailure_loaded_front}}</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>Rear</td>
+            <td>满载</td>
+            <td>{{brake.v_cbsfailure_loaded_rear}}</td>
+            <td>{{brake.s_cbsfailure_loaded_rear}}</td>
+            <td>{{brake.mfdd_cbsfailure_loaded_rear}}</td>
+            <td>{{brake.f_cbsfailure_loaded_rear}}</td>
+          </tr>
+
+          </tbody>
+
+        </table>
+        <table class="table table-bordered table-striped dataTable" role="grid" style="page-break-after: always"
+               aria-describedby="example1_info">
+          <thead>
+          <tr role="row">
+            <th class="sorting" tabindex="0" style="text-align: center" colspan="4">
+              项目(L3/L4/L5/L7)
+            </th>
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center">
+              V
+              <small>(km/h)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              INTERVAL
+              <small>(m)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              MFDD
+              <small>(m/s<sup>2</sup>)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              F
+              <small>(N)</small>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr role="row" class="odd">
+            <td class="" rowspan="4">热衰退</td>
+            <td class="sorting_1">基准</td>
+            <td colspan="2">满载</td>
+            <td>-</td>
+            <td>X</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td rowspan="2">加热</td>
+            <td rowspan="2">-</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>2~10</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>热制动</td>
+            <td colspan="2">满载</td>
+            <td>-</td>
+            <td>X</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+
+          </tbody>
+
+        </table>
+        <div class="noscreen">
+          <p>
+            上海机动车检测认证技术研究中心有限公司
+          </p>
+          <hr />
+        </div>
+        <table class="table table-bordered table-striped dataTable" role="grid"
+               aria-describedby="example1_info">
+          <thead>
+          <tr role="row">
+            <th class="sorting" tabindex="0" style="width: 100px;" rowspan="2" colspan="4">
+              项目(CBS)
+            </th>
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center" rowspan="2">
+              V
+              <small>(km/h)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center" colspan="3">
+              D
+              <small>(m/s<sup>2</sup>)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              F
+              <small>(N)</small>
+            </th>
+          </tr>
+          <tr role="row">
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center">
+              Average
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              Max
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              0.5~1s
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr role="row" class="odd">
+            <td rowspan="10">湿式</td>
+            <td rowspan="5">空载</td>
+            <td rowspan="4">基准</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>平均</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td colspan="2">淋水</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td rowspan="5">满载</td>
+            <td rowspan="4">基准</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>平均</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td colspan="2">淋水</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+
+          </tbody>
+
+        </table>
+        <table class="table table-bordered table-striped dataTable" role="grid"
+               aria-describedby="example1_info">
+          <thead>
+          <tr role="row">
+            <th class="sorting" tabindex="0" style="width: 100px;" rowspan="2" colspan="4">
+              项目
+            </th>
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center" rowspan="2">
+              V
+              <small>(km/h)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center" colspan="3">
+              D
+              <small>(m/s<sup>2</sup>)</small>
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              F
+              <small>(N)</small>
+            </th>
+          </tr>
+          <tr role="row">
+            <th class="sorting_asc" tabindex="0"
+                style="text-align: center">
+              Average
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              Max
+            </th>
+            <th class="sorting" tabindex="0" style="text-align: center">
+              0.5~1s
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr role="row" class="odd">
+            <td rowspan="10">湿式</td>
+            <td rowspan="5">Front(满载)</td>
+            <td rowspan="4">基准</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>平均</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td colspan="2">淋水</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td rowspan="5">Rear(满载)</td>
+            <td rowspan="4">基准</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td>3</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="odd">
+            <td>平均</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr role="row" class="even">
+            <td colspan="2">淋水</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
